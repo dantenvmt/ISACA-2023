@@ -1,9 +1,13 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 from flask_cors import CORS
 import pandas as pd
 
 app = Flask(__name__)
 CORS(app)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 @app.route('/api/data', methods=['GET'])
 def get_data():
@@ -14,5 +18,6 @@ def get_data():
         
     return jsonify(data)
 
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='localhost', port=5000)

@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     const problemTypeSelect = document.getElementById('problemTypeSelect');
     const radarChart = document.getElementById('radarChart').getContext('2d');
-
+    console.log('hello')
     const labels = data.map(d => d.problem_type);
     const roundedRadarPlugin = {
         id: 'roundedRadar',
