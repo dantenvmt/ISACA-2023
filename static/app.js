@@ -6,26 +6,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     const radarChart = document.getElementById('radarChart').getContext('2d');
     console.log('hello')
     const labels = data.map(d => d.problem_type);
-    const roundedRadarPlugin = {
-        id: 'roundedRadar',
-        afterDatasetsDraw: function (chart) {
-          const ctx = chart.ctx;
-      
-          chart.data.datasets.forEach((dataset, index) => {
-            const meta = chart.getDatasetMeta(index);
-      
-            meta.data.forEach((point, index) => {
-              const { x, y } = point.getCenterPoint();
-      
-              ctx.beginPath();
-              ctx.arc(x, y, 5, 0, 2 * Math.PI);
-              ctx.fillStyle = dataset.pointBackgroundColor[index];
-              ctx.fill();
-            });
-          });
-        },
-      };
-    // Fill the dropdown list with problem types
+      // Fill the dropdown list with problem types
     labels.forEach(label => {
         const option = document.createElement('option');
         option.value = label;
@@ -137,17 +118,22 @@ document.addEventListener('DOMContentLoaded', async function () {
                 }]
             },
             options: {
-                plugins: [roundedRadarPlugin],
-                scales: {
+                scales: {                    
                     r: {
+                        
                         min: 0,
                         max: 10,
+                        
                         ticks: {
-                            stepSize: 1
+                            stepSize: 1,
+                            maxTicksLimit: 10,
                         },
-                        beginAtZero: true
+                        beginAtZero: true,
+                        grid: {
+                            color: "white",
+                          },
                     }
-                }
+                },
             }
         });
     }
