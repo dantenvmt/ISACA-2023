@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', async function () {
-    const response = await fetch('http://localhost:5000/api/data');
+    const response = await fetch('https://isaca2023.azurewebsites.net/api/data');
     const data = await response.json();
 
     const problemTypeSelect = document.getElementById('problemTypeSelect');
