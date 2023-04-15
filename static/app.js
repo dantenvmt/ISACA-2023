@@ -48,11 +48,15 @@ document.addEventListener('DOMContentLoaded', async function () {
 
         if (average < 4) {
             recommendation.textContent = 'Low severity: Risk Level is low critical and does not require an effective mitigation plan.';
+            recommendation.style.color =  'green';
         } else if (average >= 4 && average < 7) {
             recommendation.textContent = 'Medium severity: Risk level is medium critical and does require an effective mitigation plan. Occurrence will impact a short-term disruption to the business and ICS systems';
+            recommendation.style.color =  'orange';
         } else {
             recommendation.textContent = 'High Severity: Risk level is extremely critical and requires immediate controlling measures to mitigate it. The occurrence will impact serious damage to global systems';
+            recommendation.style.color =  'red';
         }
+        
 
 
         const impactScore = document.getElementById('impactScore');
