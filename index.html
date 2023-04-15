@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem Explorer</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Problem Explorer</h1>
+        <div class="row">
+            <div>
+                <label for="problemTypeSelect">Select a problem type:</label>
+                <select id="problemTypeSelect"></select>
+            </div>
+            <div class="column chart-container">
+                <h2 id="chartTitle"></h2>
+                <canvas id="radarChart"></canvas>
+            </div>
+            <div class="column info-container">
+                <div id="info">
+                    <div id="problemInfo">
+                        <h3 id="problemTypeHeading"></h3>
+                        <ul>
+                          <li><span>Impact Score: </span><span id="impactScore"></span><span> (<span id="impactScoreDifference"></span>)</span></li>
+                          <li><span>Exploitability Score: </span><span id="exploitabilityScore"></span><span> (<span id="exploitabilityScoreDifference"></span>)</span></li>
+                          <li><span>Exploit Code Maturity: </span><span id="exploitCodeMaturity"></span><span> (<span id="exploitCodeMaturityDifference"></span>)</span></li>
+                          <li><span>Impact Subscore Modifiers: </span>
+                            <span id="impactSubscoreModifiers"></span><span> (<span id="impactSubscoreModifiersDifference"></span>)</span></li>
+                            </li>
+                          <li><span>Integrity Impact: </span><span id="integrityImpact"></span><span> (<span id="integrityImpactDifference"></span>)</span></li>
+                        </ul>
+                        <h3>DESCRIPTION</h3>
+                        <p id = 'description'></p>
+                      </div>
+                      
+                </div>
+            </div>
+            
+        </div>
+        <div class="table-container">
+            <table id="dataTable">
+              <thead>
+                <tr>
+                  <th data-sort="problem_type">Problem Type</th>
+                  <th >Impact Score</th>
+                  <th >Exploitability Score</th>
+                  <th >Exploit Code Maturity</th>
+                  <th >Impact Subscore Modifiers</th>
+                  <th >Integrity Impact</th>
+                  <th>Average</th>
+                  <th>Rank</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

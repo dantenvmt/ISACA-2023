@@ -1,0 +1,21 @@
+ problem_type  , impact_score , exploitability_score ,exploit_code_maturity,impact_subscore_modifiers,integrity_impact,average,rank,description
+ CWE-1             ,5.9,3.9,6,7,3,5.16,12,ip_input.c in BSD-derived TCP/IP implementations allows remote attackers to cause a denial of service (crash or hang) via crafted packets
+CWE-1021,3.876923077,4.369230769,5,5,6,4.849230769,16,The AIX FTP client can be forced to execute commands from a malicious server through shell metacharacters (e.g. a pipe character).
+CWE-113,4.36,4.28,5.6,5.2,4.5,4.788,17,Sendmail decode alias can be used to overwrite sensitive files.    
+CWE-116,4.933333333,4.75,5.611111111,5.055555556,6.277777778,5.325555556,11,Buffer overflow in AIX writesrv command allows local users to obtain root access
+ CWE-117           ,2.9,10,6,10,4,6.58,5,Various vulnerabilities in the AIX portmir command allows local users to obtain root access
+ CWE-118           ,4.52,2.38,6.6,5.6,5.8,4.98,14,"The debug command in Sendmail is enabled, allowing attackers to execute commands as root."
+ CWE-1187          ,4.533333333,6.133333333,7,4.666666667,4.833333333,5.433333333,9,Buffer overflow in AIX xdat gives root access to local users.
+ CWE-1188          ,5.452631579,4.594736842,5.789473684,5.578947368,5.526315789,5.388421053,10,test-cgi program allows an attacker to list files on the server.
+CWE-119,5.547619048,3.718452381,8.505952381,8.702380952,8.541666667,7.003214286,3,"Buffer overflow in NFS mountd gives root access to remote attackers, mostly in Linux systems."
+ CWE-120           ,6.492105263,5.973684211,7.526315789,7.921052632,7.657894737,7.114210526,2,"Telnet allows a remote client to specify environment variables including LD_LIBRARY_PATH, allowing an attacker to bypass the normal system libraries and gain root access.  "
+ CWE-121           ,7.84,7.1,9,7.4,7.2,7.708,1,phf CGI program allows remote command execution through shell metacharacters
+ CWE-122           ,6.4,6.95,7,5,9.5,6.97,4,Multiple buffer overflows in how dtmail handles attachments allows a remote attacker to execute commands
+CWE-123,5.9,1.95,2.75,1.5,3.25,3.07,20,"Arbitrary file creation and program execution using FLEXlm LicenseManager, from versions 4.0 to 5.0, in IRIX."
+ CWE-1236          ,5.780952381,4.571428571,6.047619048,6.095238095,5.523809524,5.603809524,8,Buffer overflow in HP-UX newgrp program.
+ CWE-125           ,4.88,3.79125,5.6125,5.4375,5.575,5.05925,13,Csetup under IRIX allows arbitrary file creation or overwriting.
+ CWE-1286          ,2.9,6.5,6,5,3,4.68,18," Talkd, when given corrupt DNS information, can be used to execute arbitrary commands with root privileges.                "
+ CWE-129           ,5.57,5.14,4.5,5.3,4.25,4.952,15,Buffer overflow in University of Washington's implementation of IMAP and POP servers.
+ CWE-130           ,2.9,6.5,3.5,4.2,5.3,4.48,19,"Command execution via shell metachars in INN daemon (innd) 1.5 using ""newgroup"" and ""rmgroup"" control messages, and others."
+ CWE-131           ,6.2375,5.175,6.375,6.25,5.875,5.9825,6,"Local user gains root privileges via buffer overflow in rdist, via lookup() function"
+ CWE-134           ,5.945454545,5.361363636,5.840909091,5.886363636,5.159090909,5.638636364,7,"Delete or create a file via rpc.statd, due to invalid information."
